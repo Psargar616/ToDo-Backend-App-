@@ -1,23 +1,29 @@
 # BDlec2 : Learning to create a Backend app
 
-## New Learninngs: 
+## New Learninngs:
+
 - Folder Structure of Backend App
 - Creating a server instance using
+
 ```
 const express = require("express");
 const app = express();
 ```
+
 - loading config from .env file
+
 ```
 require("dotenv").config();
 ```
 
--  parsing using express.json() 
+- parsing using express.json()
+
 ```
 app.use(express.json());
 ```
 
-- starting server 
+- starting server
+
 ```
 app.listen(PORT, () => {
   console.log(`server started successfully at ${PORT}`);
@@ -25,12 +31,14 @@ app.listen(PORT, () => {
 ```
 
 - Creating database conection with MongoDB
+
 ```
 const dbConnect = require("./config/database")
 dbConnect();
 ```
 
 - default route
+
 ```
 app.get('/' , (req, res) => {
     res.send(`<h1>This is HomePage</h1>`)
@@ -39,6 +47,7 @@ app.get('/' , (req, res) => {
 ```
 
 - Using mongoose to establish connection with MongoDB and Express
+
 ```
 // db connect to express
 const dbConnect = () => {
