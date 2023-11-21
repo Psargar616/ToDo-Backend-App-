@@ -8,6 +8,7 @@ exports.createToDo = async(req,res) => {
     try {
 
         const {title, description} = req.body;
+        // create new entry on db
         const responce = await Todo.create({title, description});
         res.status(200).json(
             {

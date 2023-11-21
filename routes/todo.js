@@ -5,7 +5,7 @@ const router = express.Router()
 
 const {createToDo} = require("../controllers/createToDo")
 
-// route and conteoller mapping
+// route and controller mapping
 router.post("/createToDo" , createToDo)
 
 module.exports = router;
